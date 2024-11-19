@@ -1,0 +1,20 @@
+{
+  "name": "graphqlcap",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^22.9.0",
+    "ts-node": "^10.9.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.11.2",
+    "graphql": "^16.9.0"
+  },
+  "scripts": {
+  "start":"ts-node src/index.ts"
+  }
+}
