@@ -1,13 +1,35 @@
+#Acá va un tipo por cada modelo de la DB#
+# Siempre debe ir un type query y un type mutation
+#donde se determina la consulta que quiero hacer para cada modelo con sus parametrs y tipos
+
 type User {
-    id: ID,
-    name: String,
+    id: ID
+    name: String
     email: String
+    roleId: String
+    role: Role
 }
 
+type Role{
+    id: ID
+    name: String
+    users: [User]
+}
+
+type Country{
+    id: ID
+    name: String
+    code: String
+}
+
+#Con el ! indico que el parámetro es obligatorio y el tipo
 type Query {
     users:[User]
+    roles:[Role]
+    user(email:String!): User 
+    role(name:String): Role
 }
 
 type Mutation {
-
+        createUser(email: String, name:String): User
 }
